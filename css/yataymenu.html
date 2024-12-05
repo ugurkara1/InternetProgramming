@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatay Menü Yapımı</title>   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+    <style>
+        ul{
+            list-style-type: none;
+            width: 100%;
+            background-color: #3f3f3f;
+
+        }
+        ul li{
+            display: inline-block;
+            width: 150px;
+            padding: 20px;
+            margin-left: -40px; 
+            margin-right: 20px;
+        }
+        ul li:hover{
+            background-color: red;
+            transition: 0.7s;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+
+        }
+        i{
+            padding-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#"><i class="fa-regular fa-house"></i>HOME</a></li>
+        <li><a href="#"><i class="fa-solid fa-newspaper"></i>NEWS</a></li>
+        <li><a href="#"><i class="fa-solid fa-address-book"></i>CONTACT</a></li>
+        <li><a href="#"><i class="fa-solid fa-eject"></i>ABOUT</a></li>
+    </ul>
+</body>

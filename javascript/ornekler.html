@@ -1,0 +1,134 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Counter</title>
+</head>
+<body>
+    <button id="myButton">Tıkla</button>
+    <p id="clickCount"> 0 kez tıklandı</p>
+    <script>
+        let clickCount=0
+        const button=document.getElementById("myButton")
+        button.addEventListener("click",function(){
+            clickCount++;
+            const clickCountDisplay=document.getElementById("clickCount")
+            clickCountDisplay.textContent=clickCount+ " kez tıklandı"
+        })
+    </script>
+</body>
+</html> -->
+
+<!-- 
+    RENK DEĞİŞTİRME BUTONU YAPALIM
+ -->
+ <!-- <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>CHANGE COLOR BUTTON</title>
+ </head>
+ <body>
+     <button id="colorButton">Rengi değiştir</button>
+     <div id="colorDiv" style="width: 100px; margin-top: 10px; border: 2px solid black;"></div>
+ 
+     <script>
+         //renk değiştirme butonu seç ve bir event ekleyerek tıklama olayını dinle 
+         const colorButton = document.getElementById("colorButton");
+         colorButton.addEventListener("click", function(){
+             const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+       
+             const colorDiv = document.getElementById("colorDiv");
+             colorDiv.style.backgroundColor = randomColor;
+         });
+     </script>
+ </body>
+ </html> -->
+<!--  
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Öğrenci Kayıt Uygulaması</title>
+ </head>
+ <body>
+     <h2>Öğrenci Kayıt Uygulaması</h2>
+ 
+     <form id="studentForm">
+         <label for="firstName">Ad:</label>
+         <input type="text" id="firstName" required><br><br>
+         
+         <label for="lastName">Soyad:</label>
+         <input type="text" id="lastName" required><br><br>
+         
+         <label for="grade">Not:</label>
+         <input type="number" id="grade" required><br><br>
+         
+         <button type="submit">Öğrenci Ekle</button>
+     </form>
+ 
+     <h3>Öğrenci Listesi</h3>
+     <ul id="studentList"></ul>
+ 
+     <h3>Arama</h3>
+     <input type="text" id="searchInput" placeholder="Öğrenci Adı"><br><br>
+     <button onclick="searchStudent()">Ara</button>
+     <div id="searchResult"></div>
+ 
+     <h3>Not Ortalaması</h3>
+     <div id="averageGrade"></div>
+ 
+     <script>
+         const studentForm = document.getElementById('studentForm');
+         const studentList = document.getElementById('studentList');
+         const searchInput = document.getElementById('searchInput');
+         const searchResult = document.getElementById('searchResult');
+         const averageGrade = document.getElementById('averageGrade');
+         let students = [];
+ 
+         studentForm.addEventListener('submit', function(event) {
+             event.preventDefault();
+             const firstName = document.getElementById('firstName').value;
+             const lastName = document.getElementById('lastName').value;
+             const grade = parseInt(document.getElementById('grade').value);
+             students.push({ firstName, lastName, grade });
+             renderStudents();
+             calculateAverageGrade();
+             this.reset();
+         });
+ 
+         function renderStudents() {
+             studentList.innerHTML = '';
+             students.forEach(function(student) {
+                 const li = document.createElement('li');
+                 li.textContent = `${student.firstName} ${student.lastName} - Not: ${student.grade}`;
+                 studentList.appendChild(li);
+             });
+         }
+ 
+         function searchStudent() {
+             const searchTerm = searchInput.value.toLowerCase();
+             const foundStudent = students.find(function(student) {
+                 return student.firstName.toLowerCase() === searchTerm || student.lastName.toLowerCase() === searchTerm;
+             });
+             if (foundStudent) {
+                 searchResult.textContent = `Öğrenci Bulundu: ${foundStudent.firstName} ${foundStudent.lastName} - Not: ${foundStudent.grade}`;
+             } else {
+                 searchResult.textContent = 'Öğrenci Bulunamadı.';
+             }
+         }
+ 
+         function calculateAverageGrade() {
+             const totalGrade = students.reduce(function(acc, student) {
+                 return acc + student.grade;
+             }, 0);
+             const average = totalGrade / students.length || 0;
+             averageGrade.textContent = `Not Ortalaması: ${average.toFixed(2)}`;
+         }
+     </script>
+ </body>
+ </html>
+  -->

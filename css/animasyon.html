@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main ve article etiketleri örneği</title>
+    <style>
+        @keyframes exampleAnimation{
+            from{
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .animated-element {
+            animation-name: exampleAnimation;
+            animation-duration: 1s; /* Animasyon süresi */
+            animation-delay: 0s; /* Gecikme süresi */
+            animation-fill-mode: both; /* Animasyon tamamlanınca son durumu koruma */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: red; text-align: center;">Merhaba dünya</h1>
+    <div style="background-color: #f0f0f0; padding: 10px;">
+        <p style="background-color: green;">Bu bir div içindeki paragraftır</p>
+    </div>
+    <div class="animated-element">Bu metin animasyonla gelecek</div>
+</body>
+</html>

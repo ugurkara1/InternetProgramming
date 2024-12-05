@@ -1,0 +1,115 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Kayıt Sistemi</title>
+</head>
+<body>
+    <h1>Öğrenci Not Kayıt Sistemi</h1>
+    <form id="studentForm">
+        <input type="text" id="firstName" placeholder="Ad:" required>
+        <input type="text" id="lastName" placeholder="Soyad" required>
+        <input type="number" id="grade" placeholder="Notu" required>
+        <button type="submit">Öğrenci Ekle</button>
+    </form>
+    <div id="studentList"></div>
+    <input type="text" id="searchInput" placeholder="Öğrenci Ara">
+    <button onclick="searchStudent()">Ara</button>
+    <button onclick="calculateAverage()">Not Ortalaması Hesapla</button>
+    <div id="searchResult"></div>
+    <div id="averageGrade"></div>
+    <script>
+        let students = [];
+
+        document.getElementById("studentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let firstName = document.getElementById("firstName").value;
+            let lastName = document.getElementById("lastName").value;
+            let grade = parseFloat(document.getElementById("grade").value);
+
+            if (!isNaN(grade)) {
+                let student = { firstName, lastName, grade };
+                students.push(student);
+                displayStudents();
+            } else {
+                alert("Geçersiz not girildi");
+            }
+            this.reset();
+        });
+
+        function displayStudents() {
+            let studentListDiv = document.getElementById("studentList");
+            studentListDiv.innerHTML = "";
+            students.forEach(function(student) {
+                let studentDiv = document.createElement("div");
+                studentDiv.textContent = `${student.firstName} ${student.lastName} - Not: ${student.grade}`;
+                studentListDiv.appendChild(studentDiv);
+            });
+        }
+
+        function searchStudent() {
+            let searchInput = document.getElementById("searchInput").value.toLowerCase();
+            let searchResult = document.getElementById("searchResult");
+            let foundStudent = students.find(function(student) {
+                return student.firstName.toLowerCase() === searchInput || student.lastName.toLowerCase() === searchInput;
+            });
+
+            if (foundStudent) {
+                searchResult.textContent = `Öğrenci Bulundu: ${foundStudent.firstName} ${foundStudent.lastName} - Not: ${foundStudent.grade}`;
+            } else {
+                searchResult.textContent = 'Öğrenci Bulunamadı.';
+            }
+        }
+
+        function calculateAverage() {
+            let averageGrade = document.getElementById("averageGrade");
+            if (students.length > 0) {
+                let total = students.reduce(function(acc, student) {
+                    return acc + student.grade;
+                }, 0);
+                let average = total / students.length;
+                averageGrade.textContent = `Not Ortalaması: ${average.toFixed(2)}`;
+            } else {
+                averageGrade.textContent = "Henüz öğrenci eklenmedi";
+            }
+        }
+    </script>
+</body>
+</html>
+ -->
+
+ <!-- <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     <script>
+        // function tekrarEdenleriKaldir(arr) {
+        //     let uniqueArray = [...new Set(arr)];
+        //     return uniqueArray;
+        // }
+
+        // let yeniDizi = tekrarEdenleriKaldir([1, 2, 3, 4, 1, 2, 5]); // yeniDizi = [1, 2, 3, 4, 5]
+
+        //  function tekrarEdenleriBul(arr) {
+        //      let tekrarEdenler = [];
+        //      for (let i = 0; i < arr.length; i++) {
+        //          for (let j = i + 1; j < arr.length; j++) {
+        //              if (arr[i] === arr[j] && !tekrarEdenler.includes(arr[i])) {
+        //                  tekrarEdenler.push(arr[i]);
+        //              }
+        //          }
+        //      }
+        //      return tekrarEdenler;
+        //  }
+ 
+        //  let tekrarEdenElemanlar = tekrarEdenleriBul([1, 2, 3, 4, 1, 2, 5]); // tekrarEdenElemanlar = [1, 2]
+        //  console.log(tekrarEdenElemanlar); // Konsolda sonucu görüntüleyin
+     </script>
+ </body>
+ </html> -->
+ 

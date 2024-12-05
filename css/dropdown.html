@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatay Menü Yapımı</title>   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+    <style>
+        ul{
+            list-style-type: none;
+            width: 100%;
+            background-color: #3f3f3f;
+
+        }
+        ul li{
+            display: inline-block;
+            width: 150px;
+            padding: 20px;
+            margin-left: -40px; 
+            margin-right: 20px;
+        }
+        ul li:hover{
+            background-color: red;
+            transition: 0.7s;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+
+        }
+        i{
+            padding-right: 5px;
+        }
+        #news-content{
+            position: absolute;
+            z-index: 1;
+            display: block;
+            margin-top: 16px;
+            margin-left: -20px;
+            width: 150px;
+        }
+        .new-li:hover #news-content{
+            display: block;
+        }
+        #news2-content{
+            position: absolute;
+            z-index: 1;
+            margin-left: 170px;
+            display: none;
+            width: 150px;
+            margin-top: -39.5px;
+        }
+        .news2-li:hover #news2-content{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#"><i class="fa-regular fa-house"></i>HOME</a></li>
+        <li class="new-li"><a href="#"><i class="fa-solid fa-newspaper"></i>NEWS</a>
+            <div id="news-content">
+                <ul>
+                    <li style="display: block;"><a href="#">NEWS 1</a></li>
+                    <li class="news2-li" style="display: block;"><a href="#">NEWS 2</a>
+                        <div id="news2-content">
+                            <ul>
+                                <li><a href="#">Detail 1</a></li>
+                                <li><a href="#">Detail 2</a></li>
+                                <li><a href="#">Detail 3</a></li>
+                                <li><a href="#">Detail 4</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li style="display: block;"><a href="#">NEWS 3</a></li>
+                    <li style="display: block;"><a href="#">NEWS 4</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#"><i class="fa-solid fa-address-book"></i>CONTACT</a></li>
+        <li><a href="#"><i class="fa-solid fa-eject"></i>ABOUT</a></li>
+    </ul>
+</body>

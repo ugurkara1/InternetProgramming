@@ -1,0 +1,65 @@
+/* Genel stiller */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form stilleri */
+#studentForm {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#studentForm input[type="text"],
+#studentForm input[type="number"] {
+    margin: 5px;
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#studentForm button {
+    padding: 8px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Liste stilleri */
+#studentlist {
+    list-style-type: none;
+    padding: 0;
+}
+
+#studentlist li {
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Arama alanı stilleri */
+#searchInput {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Ortalama stilleri */
+#averageGrade {
+    text-align: center;
+    margin-top: 20px;
+}

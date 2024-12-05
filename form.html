@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: blue;
+        }
+    </style> -->
+</head>
+<body>
+    <header>
+        <h1>Web sayfası başlığı</h1>
+    </header>
+    <nav>
+        <li><a href="#"     >Anasayfa</a></li>
+        <li><a href="#">İletişim</a></li>
+        <li><a href="#">İnstagram</a></li>
+    </nav>
+    <!-- <form>
+        <input type="text" placeholder="Kullanıcı Adı">
+        <input type="password" placeholder="Şifreniz">
+        <input type="email" placeholder="email">
+
+        <br>kitap okumak <input type="checkbox"><br>
+        spor yapmak <input type="checkbox">
+    </form> -->
+    <form action="/submit_form" method="post">
+        <label for="name">ad:</label> 
+        <input type="text" id="fname" name="firstname" placeholder="Kullanıcı adı" required>
+
+        <label for="last">Soyad:</label>
+        <input type="text" id="last" name="surname" required >
+
+        <label for="email">email:</label>
+        <input type="email"name="email" id="email" required>
+
+        <!-- <label for="male">erkek</label> -->
+        <input type="radio" name="gender" value="male"> erkek
+        <input type="radio" name="gender" value="female"> kadın
+
+        <button type="submit">Gönder</button>
+    </form>
+    
+    <hr>
+    <label for="countries"> Ülke seçiniz:</label>
+    <select name="country" id="countries">
+        <option value="turkey">Türkiye </option>
+        <option value="amerika">Amerika</option>
+    </select>
+    <footer>
+        <p>&copy;2024 Web sayfası</p>
+    </footer>
+</body>
+</html>
